@@ -8,13 +8,17 @@
   </head>
   <body>
     <header>
-      <a href="/sisi">Sisindri Singamsetti</a>
+      <a href="/">Sisindri Singamsetti</a>
     </header>
     <nav>
       <a href="/login">Login</a>
     </nav>
     <main>
       <form action="/register" method="POST">
+        <% errors.forEach( error => { %>
+        <p class="notice"><%= error %></p>
+        <% }) %>
+
         <fieldset>
           <legend>Login into Account</legend>
           <label for="username"><small>UserName</small></label>

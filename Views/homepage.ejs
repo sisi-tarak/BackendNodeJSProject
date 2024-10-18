@@ -7,32 +7,32 @@
     <link rel="stylesheet" href="/Style.css" />
   </head>
   <body>
-    <header><a href="/sisi">Sisindri Singamsetti</a></header>
+    <header><a href="/">Sisindri Singamsetti</a></header>
     <nav>
       <a href="/login">Login</a>
     </nav>
     <main>
-      <section>
-        <h1>Welcome to my portfolio</h1>
-        <p>
-          I am a full-stack developer with a passion for creating web
-          applications that are user-friendly and visually appealing. I have
-          experience with JavaScript, React, Node.js, Express, and MongoDB. I am
-          always looking for opportunities to learn and grow as a developer.
-        </p>
-      </section>
-      <section>
-        <h2>Skills</h2>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>React</li>
-          <li>Node.js</li>
-          <li>Express</li>
-          <li>MongoDB</li>
-        </ul>
-      </section>
+      <form action="/register" method="POST">
+        <% errors.forEach( error => { %>
+        <p class="notice"><%= error %></p>
+        <% }) %>
+
+        <fieldset>
+          <legend>Login into Account</legend>
+          <label for="username"><small>UserName</small></label>
+          <input type="text" id="username" name="username" autocomplete="off" />
+          <label for="password"><small>Password</small></label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            autocomplete="off"
+          />
+          <br />
+          <br />
+          <button>Register</button>
+        </fieldset>
+      </form>
     </main>
     <footer>&copy; 2021 Sisindri Singamsetti</footer>
   </body>
